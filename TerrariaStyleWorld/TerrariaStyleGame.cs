@@ -21,7 +21,6 @@ namespace TerrariaStyleWorld
 
         private const float CAMERAMOVESPEED = 1000f;// measured in pixels
         private const float CAMERA_ZOOM = 1.0f;
-        private const float CAMERA_ZOOM_FAKE = 2.0f;// remove this later
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -71,7 +70,7 @@ namespace TerrariaStyleWorld
             // initializing the camera with default values
             //mCamera.Position = new Vector2(0, 0);
             //mCamera.Zoom = CAMERA_ZOOM;
-            mCamera = new Camera(new Vector2(0, 0), GraphicsDevice.Viewport.Bounds.Size, CAMERA_ZOOM, CAMERA_ZOOM_FAKE);
+            mCamera = new Camera(new Vector2(0, 0), GraphicsDevice.Viewport.Bounds.Size, CAMERA_ZOOM);
 
             mWorld = new World(mWorldBounds);
             mWorld.Generate(out mRenderDebugInfo.numTilesTotal);

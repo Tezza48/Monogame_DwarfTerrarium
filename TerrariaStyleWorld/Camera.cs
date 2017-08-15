@@ -12,19 +12,14 @@ namespace TerrariaStyleWorld
         private Vector2 mPosition;
         private Point mViewportSize;
         private float mZoom;
-        private float mZoomFake;//remove this later
-
-        //public Vector2 Position { get => mPosition; set => mPosition = value; }
-        //public float Zoom { get => mZoom; set => mZoom = value; }
 
         private Camera() { }
 
-        public Camera(Vector2 position, Point viewportBounds, float zoom, float fakeZoom)
+        public Camera(Vector2 position, Point viewportBounds, float zoom)
         {
             mPosition = position;
             mViewportSize = viewportBounds;
             mZoom = zoom;
-            mZoomFake = fakeZoom;
         }
 
         public Matrix getView()
